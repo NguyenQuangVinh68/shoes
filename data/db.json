@@ -264,16 +264,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "email": "giusevinh12@gmail.com",
-      "favoriteProduct": [
-        {
-          "isFavorite": true,
-          "iditem": 11
-        }
-      ],
-      "id": 2
     }
   ],
   "comment": [
