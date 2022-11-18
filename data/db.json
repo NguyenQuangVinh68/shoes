@@ -264,6 +264,16 @@
         }
       ],
       "id": 1
+    },
+    {
+      "email": "giusevinh12@gmail.com",
+      "favoriteProduct": [
+        {
+          "isFavorite": true,
+          "iditem": 7
+        }
+      ],
+      "id": 2
     }
   ],
   "comment": [
@@ -275,6 +285,24 @@
       "rating": 4,
       "avata": "https://lh3.googleusercontent.com/a/ALm5wu1ua4V4l8yQZFmpbFzLfFfdZMeieGilIQRCHCmP=s96-c",
       "id": 1
+    },
+    {
+      "displayName": "Vịnh Nguyễn Quang",
+      "idProduct": "7",
+      "commentContent": "ok",
+      "date": "14-11-2022 ",
+      "rating": 4,
+      "avata": "https://lh3.googleusercontent.com/a/ALm5wu1ua4V4l8yQZFmpbFzLfFfdZMeieGilIQRCHCmP=s96-c",
+      "id": 2
+    },
+    {
+      "displayName": "Vịnh Nguyễn Quang",
+      "idProduct": "7",
+      "commentContent": "ok",
+      "date": "14-11-2022 ",
+      "rating": 1,
+      "avata": "https://lh3.googleusercontent.com/a/ALm5wu1ua4V4l8yQZFmpbFzLfFfdZMeieGilIQRCHCmP=s96-c",
+      "id": 3
     }
   ]
 }
