@@ -147,7 +147,7 @@ export default {
   // fivorites
   async favorite({ commit }) {
     try {
-      const res = await axios.get("http://localhost:3000/wishList");
+      const res = await axios.get(`${APIURL}/wishList`);
       commit("FAVORITES", res.data);
     } catch (error) {
       console.log(error);
@@ -156,7 +156,7 @@ export default {
 
   async loadcomment({ commit }, idcurrent) {
     try {
-      const res = await axios.get("http://localhost:3000/comment");
+      const res = await axios.get(`${APIURL}/comment`);
       res.data = res.data.filter((item) => item.idProduct == idcurrent);
       commit("COMMENT", res.data);
     } catch (error) {

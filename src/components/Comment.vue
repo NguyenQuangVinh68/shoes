@@ -67,7 +67,7 @@ import StarRating from 'vue-star-rating'
 import axios from 'axios';
 import { format, formatDistance, subDays } from 'date-fns'
 import { mapState } from 'vuex';
-
+import { APIURL } from "@/constant"
 export default {
 
     components: {
@@ -95,7 +95,7 @@ export default {
                     avata: this.user.photoURL
                 }
 
-                await axios.post('http://localhost:3000/comment', comment)
+                await axios.post(`${APIURL}/comment`, comment)
                 this.rating = 5
                 this.textComment = '';
             } else {

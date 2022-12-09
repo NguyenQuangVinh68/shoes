@@ -47,7 +47,7 @@ import axios from "axios";
 import { mapState } from "vuex";
 import { useStore } from 'vuex'
 import StarRating from 'vue-star-rating'
-
+import { APIURL } from "@/constant";
 import Comment from "../Comment.vue"
 
 export default {
@@ -117,9 +117,9 @@ export default {
                 const tmpfavorite = this.wishList.filter(item => item.email == this.user.email);
 
                 this.isFavorite = true;
-                if (tmpfavorite != '') {
+                if (tmpfavorite != '' || tmpfavorite.length != 0) {
                     tmpfavorite[0].favoriteProduct.push({ isFavorite: true, iditem: this.product.id })
-                    await axios.put(`http://localhost:3000/wishList/${tmpfavorite[0].id}`, tmpfavorite[0])
+                    await axios.put(`${APIURL}/wishList/${tmpfavorite[0].id - 1}`, tmpfavorite[0])
                     return
                 } else {
                     const like = {
@@ -132,7 +132,7 @@ export default {
                         ],
                     }
                     alert("add to favorites sucessfully")
-                    await axios.post("http://localhost:3000/wishList", like)
+                    await axios.post(`${APIURL}/wishList`, like)
                     this.$router.go(-1)
                     return
                 }
@@ -142,7 +142,7 @@ export default {
             const tmpfavorite = this.wishList.filter(item => item.email == this.user.email);
             if (tmpfavorite != '') {
                 tmpfavorite[0].favoriteProduct = tmpfavorite[0].favoriteProduct.filter(item => item.iditem != this.$route.params.id)
-                await axios.put(`http://localhost:3000/wishList/${tmpfavorite[0].id}`, tmpfavorite[0])
+                await axios.put(`${APIURL}/wishList/${tmpfavorite[0].id}`, tmpfavorite[0])
             }
         }
     },
