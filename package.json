@@ -6,7 +6,7 @@
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "json-server": "json-server --watch data.json --port=3000|| process.env.PORT"
+    "json-server": "json-server --watch db.json --port=3000|| process.env.PORT"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",

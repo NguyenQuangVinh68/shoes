@@ -119,7 +119,7 @@ export default {
                 this.isFavorite = true;
                 if (tmpfavorite != '' || tmpfavorite.length != 0) {
                     tmpfavorite[0].favoriteProduct.push({ isFavorite: true, iditem: this.product.id })
-                    await axios.put(`${APIURL}/wishList/${tmpfavorite[0].id - 1}`, tmpfavorite[0])
+                    await axios.put(`${APIURL}/wishList/${tmpfavorite[0].id}`, tmpfavorite[0])
                     return
                 } else {
                     const like = {
