@@ -24,12 +24,10 @@ export default {
     state.product = product;
   },
   VISIBLE_PRODUCTS(state, currentPage) {
-    console.log("currentPage", currentPage);
     if (currentPage === 0 || currentPage === undefined) {
       currentPage = 1;
     }
     let start = (currentPage - 1) * state.pageSize;
-    console.log("start", start);
     state.visibleProducts = state.products.slice(start, start + state.pageSize);
     state.currentPage = currentPage;
   },
@@ -58,7 +56,6 @@ export default {
         alert("Quantity buy bigger than stock");
       }
     }
-    console.log(state.cart, "add cart");
 
     updateLocalStorage(state.cart);
   },
@@ -101,7 +98,6 @@ export default {
       }
       item.checkStock = false;
     }
-    console.log(state.cart, "mutation");
     updateLocalStorage(state.cart);
   },
 

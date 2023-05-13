@@ -89,9 +89,10 @@ export default {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
+        console.log(result)
         const { displayName, email } = result.user;
         context.commit("SET_USER", { displayName, email });
-        router.go();
+        // router.go();
       })
       .catch((error) => {
         console.log(error);
