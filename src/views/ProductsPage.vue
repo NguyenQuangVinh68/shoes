@@ -1,8 +1,8 @@
 <template>
     <!-- <ProductComp /> -->
-    .<div class="container-fluid  bg-white  ">
+    <div class="container-fluid  bg-white  ">
         <div class="row w-100 py-5">
-            <div class="col-lg-3 col-md-2 col-12 plugin">
+            <div class="col-lg-3 col-md-2  plugin">
                 <div class="card ps-3 border-0 position-relative">
                     <h5>Plugin</h5>
                     <div class="text-start mt-5 me-2">
